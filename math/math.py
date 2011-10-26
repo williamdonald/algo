@@ -1,5 +1,6 @@
+#by shift and induction
+
 def divide(x,y):
-  #
   result = (0,0)
 
   if x ==0 :
@@ -15,4 +16,13 @@ def divide(x,y):
     q = q+1
 
   return (q,r)  
+  
+def multiply(x,y):
+  if y ==0:
+    return 0
+  z = multiply(x,y/2)
+  if y%2 ==0:
+    return 2*z
+  else:
+    return x +2*z
   
