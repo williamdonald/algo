@@ -25,4 +25,11 @@ def multiply(x,y):
     return 2*z
   else:
     return x +2*z
+
+#bitwise
+def powerof2(x):
+  return x&(x-1) ==0
   
+#bitwise 
+def isKbitSet(x,k):
+  return (x & 1<<(k-1)) != 0
