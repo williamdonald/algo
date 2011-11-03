@@ -39,8 +39,9 @@ def countBits(x):
 # 912763458, then you can understand the following algorithm
 
 ###
-#stable state, alwasy swap last two bits  
-#1234-->1243 #swap 3,4
+#base state: 3 is smaller than 4, 
+#but our next phase should be a little bigger, so swap 3,4
+#1234-->1243 
 
 # usage:
 # nextPerm([1,4,3,2])
