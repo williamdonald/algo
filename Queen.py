@@ -1,5 +1,14 @@
 #eight queen problem solution
-#use backtracking and recursion
+#use recursion and backtracking
+
+#why backtracking?
+
+#we can decompose one instance of our problem into serveral possible subproblems
+#That is, each time we make a recursive call, we will have to make a choice as 
+#to which decomposition to use.  If we choose the wrong one, we will eventually run into a 
+#dead end and find ourselves in a state from which we are unable to solve the problem 
+#immediately and unable to decompose the problem any further; when this happens, we 
+#will have to backtrack to a "choice point" and try another alternative.  
 
 #usage: xQueen([-1,-1,-1,-1,-1,-1,-1,-1],0)
 
