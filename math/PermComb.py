@@ -1,16 +1,38 @@
-#pseudo code recursive way???
-#The sequence of permutations for a given number n can be formed
-#from the sequence of permutations for n − 1
-#by placing the number n into each possible position in each of the shorter permutations.
+#permutation recursion way
+###############property#######################################
+#                                                            #
+#                  | ai,P(a1,...,ai-1,ai+1,...aN) if N > 1   #
+#P(a1,a2,...aN) =  |                                         #
+#                  | aN                           if N = 1   # 
+#                                                            #
+###############property#######################################
 
+def swap(a,x,y):
+  t = a[x]
+  a[x] = a[y]
+  a[y] = t
 
-def perm(head,tail=''):
-  if len(head) ==0:
-    print (tail)
-  else:
-    for i in range(len(head)):
-      perm(head[0:i]+head[i+1:],tail+head[i])
+#usage:perm([1,2,3],3)
+def permimpl(a,n):
+  if n==1:
+    print (a)
+    return
+  #a special case is to swap n-1 with n-1!!!
+  for i in range(n):
+    #we use first element as pivot
+    swap(a,i,0)
+    permimpl(a,n-1)
+    swap(a,0,i)
+    #or you can use end as pivot
+    #swap(a,i,n-1)
+    #permimpl(a,n-1)
+    #swap(a,n-1,i)
 
+def perm(a):
+  """
+  usage: perm([1,2,3,4])
+  """
+  permimpl(a,len(a))
  
 
 #TODO 
