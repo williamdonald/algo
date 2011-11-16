@@ -1,3 +1,5 @@
+#usage
+#longestPalindrome("#a#b#c#b#a#c#a#b#c#b#a#")
 def longestPalindrome(s):
   p = [1]
   n = len(s)
