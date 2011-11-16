@@ -12,12 +12,12 @@ def longestPalindrome(s):
     else:
       p.append(1)
 
-    while (i-p[i]>=0) and (i+p[i]<n) and (s[i+p[i]] == s[i-p[i]]) :
-      p[i] = p[i]+1
+      while (i-p[i]>=0) and (i+p[i]<n) and (s[i+p[i]] == s[i-p[i]]) :
+        p[i] = p[i]+1
 
-    if p[i]+i > mx:
-      mx = p[i] + i
-      mid = i
+      if p[i]+i > mx:
+        mx = p[i] + i
+        mid = i
 
     i = i+1
   return (max(int(x) for x in p)-1)
