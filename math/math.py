@@ -25,6 +25,15 @@ def multiply(x,y):
     return 2*z
   else:
     return x +2*z
+#multiply2(x,y)
+def multiply2(x,Y):
+    if(y==0): return 0
+    r = 0 
+    while(x !=0):
+        if(x%2 !=0 ): r +=y
+        x = x/2
+        y = 2y
+    return r
 
 #bitwise
 def powerof2(x):
