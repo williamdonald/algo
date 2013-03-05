@@ -20,9 +20,9 @@ def permimpl(a,n):
   #a special case is to swap n-1 with n-1!!!
   for i in range(n):
     #we use first element as pivot
-    swap(a,i,0)
+    swap(a,i,n-1)
     permimpl(a,n-1)
-    swap(a,0,i)
+    swap(a,n-1,i)
     #or you can use end as pivot
     #swap(a,i,n-1)
     #permimpl(a,n-1)
